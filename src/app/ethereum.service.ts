@@ -48,11 +48,7 @@ export class EthereumService {
 
   async init(): Promise<void> {
     await this.provider.send('eth_requestAccounts', []);
-    // const accounts = await this.provider.listAccounts();
     this.signer = await this.provider.getSigner();
-    console.log("this.provider", this.provider);
-    // console.log("accounts", accounts);
-    console.log("this.signer", this.signer);
 
     this.MoodContract = new ethers.Contract('0x5DB806eB4AD37747D37bcF5262f055FD65Ac938A', this.abi, this.signer);
   }

@@ -192,16 +192,16 @@
         Congratulations {{ name }}! Your app is running user {{ userId }}. 🎉
       </p>
 
-      <div>
+      <form (ngSubmit)="onSubmit()">
         <p>Here we can set or get the mood:</p>
         <label for="mood">Input Mood:</label> <br />
-        <input type="text" id="mood" />
+        <input type="text" id="mood" name="newMood" [(ngModel)]="newMood" />
 
-        <button (click)="getMood()">Get Mood</button>
-        <button onclick="setMood()">Set Mood</button>
-        <p id="showMood">{{ moodState }}</p>
-      </div>
+        <button type="submit">Set Mood</button>
+      </form>
+      <button (click)="getMood()">Get Mood</button>
 
+      <p id="showMood">{{ moodState }}</p>
       <!DOCTYPE html>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
