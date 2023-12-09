@@ -10,5 +10,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first-dapp';
+  title = 'World';
+  name = 'Kyle';
+  userId = "549";
+  firstDapp = "My first DaPP"
 }
