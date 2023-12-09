@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { EthereumService } from './ethereum.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  constructor(private ethereumService: EthereumService) {}
+
   title = 'World';
   name = 'Kyle';
   userId = "549";
-  firstDapp = "My first DaPP"
+  firstDapp = "First Angular Dapp"
 }
+
