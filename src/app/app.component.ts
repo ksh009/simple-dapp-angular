@@ -20,9 +20,9 @@ export class AppComponent {
   moodState = "Default"
 
   async getMood(): Promise<void> {
-    // const mood = await this.ethereumService.getMood();
-    // console.log(mood);
-    this.moodState = "updated";
+    const mood = await this.ethereumService.getMood();
+    console.log("mood", mood);
+    this.moodState = mood;
   }
 }
 
