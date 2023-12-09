@@ -17,5 +17,12 @@ export class AppComponent {
   name = 'Kyle';
   userId = "549";
   firstDapp = "First Angular Dapp"
+  moodState = "Default"
+
+  async getMood(): Promise<void> {
+    // const mood = await this.ethereumService.getMood();
+    // console.log(mood);
+    this.moodState = "updated";
+  }
 }
 

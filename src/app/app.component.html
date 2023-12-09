@@ -197,9 +197,9 @@
         <label for="mood">Input Mood:</label> <br />
         <input type="text" id="mood" />
 
-        <button onclick="getMood()">Get Mood</button>
+        <button (click)="getMood()">Get Mood</button>
         <button onclick="setMood()">Set Mood</button>
-        <p id="showMood"></p>
+        <p id="showMood">{{ moodState }}</p>
       </div>
 
       <!DOCTYPE html>
